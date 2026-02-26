@@ -48,9 +48,17 @@ function validateForm() {
     // ==========================================
     // Requisitos: No vacío, mínimo 2 caracteres
     // Pista: Usa getElementById('apellidoPaterno')
-    
-    // Tu código aquí...
-    
+    const apellidoPaterno = document.getElementById('apellidoPaterno');
+    const valorApellidoPaterno = apellidoPaterno.value.trim();
+    if (valorApellidoPaterno === '') {
+        apellidoPaterno.classList.add('no-valid');
+        isValid = false;
+    } else if (valorApellidoPaterno.length < 2) {
+        apellidoPaterno.classList.add('no-valid');
+        isValid = false;
+    } else {
+        apellidoPaterno.classList.remove('no-valid');
+    }
     
     // ==========================================
     // TODO: Validar Apellido Materno
@@ -58,6 +66,17 @@ function validateForm() {
     // Requisitos: No vacío, mínimo 2 caracteres
     
     // Tu código aquí...
+     const apellidoMaterno = document.getElementById('apellidoMaterno');
+    const valorApellidoMaterno = apellidoMaterno.value.trim();
+    if (valorApellidoMaterno === '') {
+        apellidoMaterno.classList.add('no-valid');
+        isValid = false;
+    } else if (valorApellidoMaterno.length < 2) {
+        apellidoMaterno.classList.add('no-valid');
+        isValid = false;
+    } else {
+        apellidoMaterno.classList.remove('no-valid');
+    }
     
     
     // ==========================================
@@ -67,12 +86,19 @@ function validateForm() {
     // Pista: Usa /^\d{10}$/.test(valor) para validar
     
     // Tu código aquí...
+    const cedula = document.getElementById('cedula');
+    const valorCedula = cedula.value.trim();
+    const regex = /^\d{10}$/;
     
-    
-    // ==========================================
-    // TODO: Validar Motivo
-    // ==========================================
-    // Requisitos: No vacío, mínimo 10 caracteres
+    if (!regex.test(valorCedula)) {
+        cedula.classList.add('no-valid');
+        isValid = false;
+    } else if (!regex.test(valorCedula)) {
+        cedula.classList.add('no-valid');
+        isValid = false;
+    } else {
+        cedula.classList.remove('no-valid');
+    }
     
     // Tu código aquí...
     
