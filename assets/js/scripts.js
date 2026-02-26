@@ -89,7 +89,7 @@ function validateForm() {
     const cedula = document.getElementById('cedula');
     const valorCedula = cedula.value.trim();
     const regex = /^\d{10}$/;
-    
+
     if (!regex.test(valorCedula)) {
         cedula.classList.add('no-valid');
         isValid = false;
@@ -110,8 +110,15 @@ function validateForm() {
     // Pista: Verifica que select.value !== ''
     
     // Tu código aquí...
-    
-    
+    const tipoCuenta = document.getElementById('tipoCuenta');
+    const valorTipoCuenta = tipoCuenta.value.trim();
+    if (valorTipoCuenta === '') {
+        tipoCuenta.classList.add('no-valid');
+        isValid = false;
+    } else {
+        tipoCuenta.classList.remove('no-valid');
+    }
+
     // ==========================================
     // TODO: Validar Calle
     // ==========================================
