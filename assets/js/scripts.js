@@ -72,7 +72,7 @@ function validateForm() {
     // Requisitos: No vacío, mínimo 2 caracteres
     
     // Tu código aquí...
-    const apellidoMaterno = document.getElementById('apellidoMaterno');
+    const apellidoMaterno = document.getElementById('apellidomaterno');
     const valorApellidoMaterno = apellidoMaterno.value.trim();
     
     if (valorApellidoMaterno === '') {
